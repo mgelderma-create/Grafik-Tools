@@ -36,14 +36,18 @@ if uploaded_file:
             textposition='middle center'
         )
         fig.update_layout(
-            yaxis=dict(autorange="reversed"),  # Nord oben
-            plot_bgcolor="white",
-            paper_bgcolor="white",
-            xaxis=dict(showgrid=False, zeroline=False),
-            yaxis=dict(showgrid=False, zeroline=False),
-            margin=dict(l=20, r=20, t=40, b=20),
-            height=800,
+    yaxis=dict(
+        autorange="reversed",
+        showgrid=False,
+        zeroline=False
+    ),
+    plot_bgcolor="white",
+    paper_bgcolor="white",
+    xaxis=dict(showgrid=False, zeroline=False),
+    margin=dict(l=20, r=20, t=40, b=20),
+    height=800,
         )
+
         st.plotly_chart(fig, use_container_width=True)
         st.success("Karte erfolgreich erstellt! Sie können die Grafik per Rechtsklick speichern.")
 
