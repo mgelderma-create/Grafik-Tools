@@ -37,7 +37,6 @@ if uploaded_file:
         )
         fig.update_layout(
     yaxis=dict(
-        autorange="reversed",
         showgrid=False,
         zeroline=False
     ),
