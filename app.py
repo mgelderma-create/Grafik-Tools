@@ -21,6 +21,8 @@ if uploaded_file:
         st.error(f"Die Datei muss die Spalten {required_cols} enthalten.")
     else:
         # Achsen skalieren
+        df["Längengrad"] = pd.to_numeric(df["Längengrad"], errors="coerce")
+        df["Breitengrad"] = pd.to_numeric(df["Breitengrad"], errors="coerce")
         df["Längengrad_skal"] = df["Längengrad"] * 0.65
         df["Breitengrad_skal"] = df["Breitengrad"] * 1.24
         
