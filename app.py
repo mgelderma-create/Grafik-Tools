@@ -27,13 +27,13 @@ if uploaded_file:
         # Plotly-Scatterplot auf weißem Hintergrund
         fig = px.scatter(
             df,
-            x="Längengrad",
-            y="Breitengrad",
+            x="Längengrad_skal",
+            y="Breitengrad_skal",
             size="Wert",
             text="Ort",
-            size_max=100,
+            size_max=80,
             color_discrete_sequence=["#0066b3"],
-            labels={"Längengrad": "Longitude", "Breitengrad": "Latitude"},
+            labels={"Längengrad_skal": "Longitude", "Breitengrad_skal": "Latitude"},
         )
         fig.update_traces(
             marker=dict(line=dict(width=2, color="white")),
