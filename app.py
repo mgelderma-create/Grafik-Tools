@@ -27,7 +27,7 @@ if uploaded_file:
             y="Breitengrad",
             size="Wert",
             text="Ort",
-            size_max=80,
+            size_max=100,
             color_discrete_sequence=["#0066b3"],
             labels={"Längengrad": "Longitude", "Breitengrad": "Latitude"},
         )
