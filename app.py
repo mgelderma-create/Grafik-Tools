@@ -33,7 +33,7 @@ if uploaded_file:
         )
         fig.update_traces(
             marker=dict(line=dict(width=2, color="white")),
-            textposition='middle center'
+            textposition='middle center',
             textfont=dict(color="white")
         )
         fig.update_layout(
