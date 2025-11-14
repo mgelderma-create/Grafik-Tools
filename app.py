@@ -20,6 +20,10 @@ if uploaded_file:
     if not required_cols.issubset(df.columns):
         st.error(f"Die Datei muss die Spalten {required_cols} enthalten.")
     else:
+        # Achsen skalieren
+        df["Längengrad_skal"] = df["Längengrad"] * 0.65
+        df["Breitengrad_skal"] = df["Breitengrad"] * 1.24
+        
         # Plotly-Scatterplot auf weißem Hintergrund
         fig = px.scatter(
             df,
