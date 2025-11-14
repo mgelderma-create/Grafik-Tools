@@ -28,12 +28,13 @@ if uploaded_file:
             size="Wert",
             text="Ort",
             size_max=80,
-            color_discrete_sequence=["#1565c0"],
+            color_discrete_sequence=["#0066b3"],
             labels={"Längengrad": "Longitude", "Breitengrad": "Latitude"},
         )
         fig.update_traces(
             marker=dict(line=dict(width=2, color="white")),
             textposition='middle center'
+            textfont=dict(color="white")
         )
         fig.update_layout(
     yaxis=dict(
